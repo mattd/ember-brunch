@@ -12,12 +12,12 @@ See more info on the [official site](http://brunch.io)
 * `empty` is a clean version of the skeleton with no examples
 
 ## Usage
-    
-    brunch new myapp -s git://github.com/icholy/ember-brunch.git
+
+    brunch new myapp -s git://github.com/mattd/ember-brunch.git
 
 if you wanted to use the `empty` skeleton branch
 
-    git clone git://github.com/icholy/ember-brunch.git -b empty
+    git clone git://github.com/mattd/ember-brunch.git -b empty
     brunch new myapp -s ./ember-brunch/
 
 Once the project has been created, you can start a server by running
@@ -40,15 +40,14 @@ then visit `localhost:3333`
       styles/
       templates/
       models/
+        init.js
       views/
+        init.js
       controllers/
-      templates.js
-      models.js
-      views.js
-      controllers.js
+        init.js
       app.js
       router.js
-      initialize.js
+      init.js
     /vendor/
       scripts/
         jquery-1.8.0.js
@@ -68,7 +67,7 @@ then visit `localhost:3333`
 * `config.coffee` contains your app configuration. This is where you configure what Plugins / Languages to use and what rules are applied to them.
 * `app/` and subdirectories (excluding `app/assets`) contains files that are to be compiled. Javascript files, or files that compile to JS (coffeescript, roy etc.), are automatically wrapped as commonjs style modules so they can be loaded via `require('module/location')`.
 * `app/assets` contains images / static files. The contents of the directory are copied to `public/` without any modification.
-* `app/templates.js`, `app/models.js`, `app/views.js`, and `app/controllers.js` are loaded in `initialize.js` and are responsible for loading their respective classes.
+* `app/models/init.js`, `app/views/init.js`, and `app/controllers/init.js` are loaded in `init.js` and are responsible for loading their respective classes.
 * `test/` contains unit tests.
 * `vendor/` contains all third-party code. The code wouldn’t be wrapped in
 modules, it would be loaded instantly instead.
