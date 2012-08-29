@@ -1,6 +1,6 @@
 window.App = require('app');
 
-require('store');
+require('data');
 require('models/init');
 require('controllers/init');
 require('views/init');
