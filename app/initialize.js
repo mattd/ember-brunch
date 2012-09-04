@@ -1,9 +1,9 @@
 window.App = require('app');
 
 require('data');
-require('models/init');
-require('controllers/init');
-require('views/init');
+require('models');
+require('controllers');
+require('views');
 require('router');
 
 App.initialize();

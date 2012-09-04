@@ -3,17 +3,17 @@ path = require 'path'
 
 # See docs at http://brunch.readthedocs.org/en/latest/config.html.
 
-exports.config = 
+exports.config =
 
-  files: 
-    
-    javascripts: 
+  files:
+
+    javascripts:
       defaultExtension: 'js',
-      joinTo: 
+      joinTo:
         'javascripts/app.js': /^app/
         'javascripts/vendor.js': /^vendor/
 
-      order: 
+      order:
         before: [
           'vendor/scripts/console-helper.js',
           'vendor/scripts/jquery-1.8.0.min.js',
@@ -34,8 +34,10 @@ exports.config =
       defaultExtension: 'hbs'
       joinTo: 'javascripts/app.js' : /^app/
 
+  conventions:
+    assets: /static(\/|\\)/
+
   server:
     port: 3333
     base: '/'
     run: no
-
