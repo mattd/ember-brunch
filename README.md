@@ -35,19 +35,17 @@ then visit `localhost:3333`
       assets/
         index.html
         img/
-          glyphicons-halflings-white.png
-          glyphicons-halflings.png
       styles/
       templates/
       models/
-        init.js
+      models.js
       views/
-        init.js
+      views.js
       controllers/
-        init.js
+      controllers.js
       app.js
       router.js
-      init.js
+      initialize.js
     /vendor/
       scripts/
         jquery-1.8.0.js
@@ -56,7 +54,6 @@ then visit `localhost:3333`
         ember-data-latest.js
         handlebars-1.0.0.beta.6.js
       styles/
-        bootstrap.css
     /public/
       img/
       stylesheets/
@@ -67,7 +64,7 @@ then visit `localhost:3333`
 * `config.coffee` contains your app configuration. This is where you configure what Plugins / Languages to use and what rules are applied to them.
 * `app/` and subdirectories (excluding `app/assets`) contains files that are to be compiled. Javascript files, or files that compile to JS (coffeescript, roy etc.), are automatically wrapped as commonjs style modules so they can be loaded via `require('module/location')`.
 * `app/assets` contains images / static files. The contents of the directory are copied to `public/` without any modification.
-* `app/models/init.js`, `app/views/init.js`, and `app/controllers/init.js` are loaded in `init.js` and are responsible for loading their respective classes.
+* `app/models.js`, `app/views.js`, and `app/controllers.js` are loaded in `initialize.js` and are responsible for loading their respective classes.
 * `test/` contains unit tests.
 * `vendor/` contains all third-party code. The code wouldn’t be wrapped in
 modules, it would be loaded instantly instead.
@@ -78,4 +75,6 @@ The generated output is placed in the `public/` (by default) directory when `bru
 Software Versions used:
 
 * jQuery 1.8.0
-* Ember latest
+* ember latest
+* ember-data latest
+* handlebars 1.0.0 beta 6
