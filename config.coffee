@@ -10,6 +10,7 @@ exports.config =
       joinTo:
         'javascripts/app.js': /^app/
         'javascripts/vendor.js': /^vendor/
+        'test/test.js': /^test/
       order:
         before: [
           'vendor/scripts/console-helper.js',
@@ -17,7 +18,7 @@ exports.config =
           'vendor/scripts/handlebars-1.0.0.beta.6.js',
           'vendor/scripts/ember-latest.js',
           'vendor/scripts/ember-data-latest.js'
-	    ]
+        ]
 
     stylesheets:
       defaultExtension: 'styl'
@@ -30,6 +31,17 @@ exports.config =
 
   conventions:
     assets: /static(\/|\\)/
+
+  jshint:
+    pattern: /^app\/.*\.js$/
+    options:
+      bitwise: true
+      curly: true
+    globals:
+      jQuery: true
+      App: true
+      Ember: false
+      Em: false
 
   server:
     port: 3333
